@@ -3,10 +3,10 @@
 // A feedforward neural net mapping R --> R
 
 
-var generateRandomArray = function (length) {
+var generateRandomArray = function (length, min = -10, max = 10) {
   var randomArray = [];
   while (randomArray.length < length) {
-    randomArray.push(Math.random());
+    randomArray.push(min + (max - min) * Math.random());
   }
   return randomArray;
 }
